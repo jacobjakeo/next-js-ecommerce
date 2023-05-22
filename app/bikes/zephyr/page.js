@@ -5,7 +5,11 @@ export default function Zephyr() {
     <main>
       <div className={styles.parent}>
         <div className={styles.ProductPage} />
-        <div className={styles.ProductImage}>BikeImg</div>
+        <img
+          src="/zephyrproduct.png"
+          alt="Zephyr X"
+          className={styles.ProductImage}
+        />
         <div className={styles.ProductName}>
           <h1>Zephyr X</h1>
           <span className={styles.PriceTag}>€ 2.550,00</span>

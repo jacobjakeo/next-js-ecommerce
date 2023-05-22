@@ -1,17 +1,21 @@
 .parent {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 10px;
+  grid-template-columns: repeat(7, 1fr, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-row-gap: 0;
   margin-bottom: 150px;
+  margin-top: 80px;
 }
 .ProductPage {
   grid-area: 1 / 1 / 6 / 7;
 }
 .ProductImage {
   grid-area: 2 / 2 / 5 / 4;
+  width: 95%;
+  height: 85%;
+  margin-top: 55px;
 }
+
 .ProductName {
   grid-area: 2 / 4 / 3 / 7;
   h1 {

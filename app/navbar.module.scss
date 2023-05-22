@@ -1,7 +1,41 @@
 .Navbar {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  background: transparent;
+  text-transform: uppercase;
+
+  .Logo {
+    font-family: 'ScriptaGothic', Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+  }
+
+  .Cart {
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+
+  .Bikes {
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  a:hover {
+    color: grey;
+  }
+
+  a:active {
+    color: black;
+  }
+
   :first-child {
     margin-left: 20px;
   }

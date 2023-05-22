@@ -1,3 +1,13 @@
 html {
   background: whitesmoke;
 }
+
+@font-face {
+  font-family: 'ScriptaGothic';
+  src: url('/fonts/ScriptaGothic.otf');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo.ttf');
+}
