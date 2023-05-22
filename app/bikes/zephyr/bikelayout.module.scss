@@ -1,0 +1,55 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0;
+  margin-bottom: 150px;
+}
+.ProductPage {
+  grid-area: 1 / 1 / 6 / 7;
+}
+.ProductImage {
+  grid-area: 2 / 2 / 5 / 4;
+}
+.ProductName {
+  grid-area: 2 / 4 / 3 / 7;
+  h1 {
+    margin-left: 20px;
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+  .PriceTag {
+    border: 10px solid #e8e9e4;
+    border-radius: 10px;
+    background: #e8e9e4;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+}
+.Description {
+  grid-area: 3 / 4 / 4 / 7;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.TechnicalSpecs {
+  grid-area: 4 / 4 / 5 / 7;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  background: #e8e9e4;
+  border-radius: 10px;
+  border: 20px solid #e8e9e4;
+  margin-right: 20px;
+}
+
+.TechnicalSpecsDesc {
+  font-size: small;
+  column-gap: 100px;
+  line-height: 1.1rem;
+  h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}

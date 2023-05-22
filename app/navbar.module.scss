@@ -1,0 +1,11 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  :first-child {
+    margin-left: 20px;
+  }
+  :last-child {
+    margin-right: 20px;
+  }
+}
