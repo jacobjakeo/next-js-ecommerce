@@ -5,7 +5,11 @@ export default function Notus() {
     <main>
       <div className={styles.parent}>
         <div className={styles.ProductPage} />
-        <div className={styles.ProductImage}>BikeImg</div>
+        <img
+          src="/notusproduct.png"
+          alt="Notus"
+          className={styles.ProductImage}
+        />
         <div className={styles.ProductName}>
           <h1>Notus</h1>
           <span className={styles.PriceTag}>€ 3.980,00</span>

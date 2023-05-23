@@ -5,7 +5,11 @@ export default function NotusJunior() {
     <main>
       <div className={styles.parent}>
         <div className={styles.ProductPage} />
-        <div className={styles.ProductImage}>BikeImg</div>
+        <img
+          src="/notusjuniorproduct.png"
+          alt="Notus Junior"
+          className={styles.ProductImage}
+        />
         <div className={styles.ProductName}>
           <h1>Notus Junior</h1>
           <span className={styles.PriceTag}>€ 2.100,00</span>

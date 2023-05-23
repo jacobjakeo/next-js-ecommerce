@@ -1,0 +1,55 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: rgb(245, 245, 245);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 7%,
+    rgba(227, 242, 233, 1) 26%,
+    rgba(202, 230, 213, 1) 46%
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 4 / 7;
+
+  .nyxusBikes {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.div2 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div3 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.div4 {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.div5 {
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+.Link {
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  color: #0e0f11;
+  font-weight: 500;
+  border-color: white;
+  background-color: white;
+  border: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  max-width: 100%;
+  height: auto;
+  margin-left: 10%;
+}

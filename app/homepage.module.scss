@@ -1,0 +1,26 @@
+.LandingPage {
+  position: absolute;
+  background: rgb(245, 245, 245);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 7%,
+    rgba(227, 242, 233, 1) 26%,
+    rgba(202, 230, 213, 1) 46%
+  );
+  height: 100%;
+  width: 100%;
+
+  h1 {
+    font-family: 'Archivo', sans-serif;
+  }
+
+  .NyxusBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 85%;
+    width: 100%;
+    background-position: center;
+    margin-bottom: 100px;
+  }
+}

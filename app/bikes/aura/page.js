@@ -5,7 +5,11 @@ export default function Aura() {
     <main>
       <div className={styles.parent}>
         <div className={styles.ProductPage} />
-        <div className={styles.ProductImage}>BikeImg</div>
+        <img
+          src="/auraproduct.png"
+          alt="Aura Junior"
+          className={styles.ProductImage}
+        />
         <div className={styles.ProductName}>
           <h1>Aura Junior</h1>
           <span className={styles.PriceTag}>€ 1.550,00</span>
