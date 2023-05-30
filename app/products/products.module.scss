@@ -1,0 +1,61 @@
+.BikesPage {
+  display: flex;
+  position: fixed;
+  margin: 0;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+
+  h1 {
+    display: grid;
+    position: fixed;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Archivo', Helvetica, sans-serif;
+    z-index: 1;
+  }
+  background-size: cover;
+}
+
+.bikesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-areas:
+    '. . . . . . .'
+    'productsLinks productsLinks productsLinks productsLinks productsLinks productsLinks productsLinks'
+    'productsImages productsImages productsImages productsImages productsImages productsImages productsImages';
+  justify-content: center;
+  justify-items: center;
+  flex-grow: 1;
+  position: relative;
+  height: 100vh;
+  width: 100vh;
+
+  .Name {
+    text-decoration: none;
+    font-family: 'Archivo', Helvetica, sans-serif;
+    font-weight: 700;
+    color: #fefefe;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+}
+
+.productsLinks {
+  grid-area: productsLinks;
+  position: absolute;
+  margin-top: 15vh;
+}
+
+.productsImages {
+  grid-area: productsImages;
+  border: hwb(0 100% 0% / 0.512) 20px;
+  background: hwb(0 100% 0% / 0.512);
+  height: 35vh;
+  position: relative;
+  border-radius: 10px;
+}

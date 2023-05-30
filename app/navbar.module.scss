@@ -1,8 +1,11 @@
 .Navbar {
   display: flex;
+  position: fixed;
   justify-content: space-between;
-  background: transparent;
+  background: none;
   text-transform: uppercase;
+  z-index: 2;
+  width: 100%;
 
   .Logo {
     font-family: 'ScriptaGothic', Arial, Helvetica, sans-serif;
@@ -12,6 +15,12 @@
   .Cart {
     font-family: 'Archivo', Arial, Helvetica, sans-serif;
     font-size: 2rem;
+    text-align: center;
+
+    .CartQuantity {
+      font-family: 'Archivo', Arial, Helvetica, sans-serif;
+      font-size: 0.5rem;
+    }
   }
 
   .Bikes {

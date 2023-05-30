@@ -1,0 +1,19 @@
+.CartPage {
+  background: rgb(245, 245, 245);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 7%,
+    rgba(227, 242, 233, 1) 26%,
+    rgba(202, 230, 213, 1) 46%
+  );
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Cart-Container {
+  width: 70%;
+  height: 85%;
+  border-radius: 20px;
+}

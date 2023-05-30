@@ -1,40 +1,59 @@
+'use strict';
+
+import Image from 'next/image';
+import AddQuantityButton from '../../components/AddQuantity';
+import { getBikeById } from '../../database/bikes';
 import styles from './bikelayout.module.scss';
 
-export default function Zephyr() {
+export const dynamic = 'force-dynamic';
+
+export const metadata = {
+  title: 'Nyxus | Bike',
+  description: 'Choose a bike that suits your needs.',
+};
+
+export default async function BikePage({ params }) {
+  // const singleBike = getBikeById(Number(params.bikeId));
+  // Convert the string into a number
+
+  const singleBike = await getBikeById(Number(params.bikeId));
+
   return (
     <main>
       <div className={styles.parent}>
         <div className={styles.ProductPage} />
-        <img
-          src="/zephyrproduct.png"
+        <Image
+          src={`/images/${singleBike.productName}.png`}
           alt="Zephyr X"
           className={styles.ProductImage}
+          data-test-id="product-image"
+          width={550}
+          height={550}
         />
         <div className={styles.ProductName}>
-          <h1>Zephyr X</h1>
-          <span className={styles.PriceTag}>€ 2.550,00</span>
+          <h1>{singleBike.productName}</h1>
+          <span className={styles.PriceTag} data-test-id="product-price">
+            € {singleBike.price},00
+          </span>
+          <AddQuantityButton />
         </div>
         <div className={styles.Description}>
           <ul>
-            <li>
-              Stylish and sleek electric citybike designed for urban
-              adventurers.
-            </li>
+            <li>{singleBike.description}</li>
             <li>
               Electric motor provides swift acceleration and effortless
-              cruising, up to 40km/h.
+              cruising.
             </li>
             <li>
-              Lightweight and durable construction for agile maneuverability in
-              city traffic.
+              Lightweight and durable construction for agile maneuverability.
             </li>
             <li>
               Long-lasting battery life for extended rides without the need for
               frequent charging.
             </li>
             <li>
-              Embrace the future of commuting with Zephyr X and experience a
-              thrilling and eco-friendly way to navigate the city streets.
+              Embrace the future of commuting with Nyxus and experience a
+              thrilling and eco-friendly way to navigate.
             </li>
           </ul>
         </div>
@@ -42,10 +61,9 @@ export default function Zephyr() {
           <div className={styles.TechnicalSpecsDesc}>
             <h3>Battery</h3>
             <p>
-              High-capacity lithium-ion battery for long-range travel, up to
-              80km on a single charge. Fast charging capability for quick and
-              convenient recharging. Intelligent battery management for optimal
-              performance.
+              High-capacity lithium-ion battery for long-range travel. Fast
+              charging capability for quick and convenient recharging.
+              Intelligent battery management for optimal performance.
             </p>
           </div>
           <div className={styles.TechnicalSpecsDesc}>

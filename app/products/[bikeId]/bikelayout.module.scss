@@ -3,8 +3,8 @@
   grid-template-columns: repeat(7, 1fr, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-row-gap: 0;
-  margin-bottom: 150px;
-  margin-top: 80px;
+  margin-top: 20vh;
+  position: absolute;
 }
 .ProductPage {
   grid-area: 1 / 1 / 6 / 7;
@@ -21,11 +21,12 @@
     margin-left: 20px;
     font-size: 2.5rem;
     margin-top: 10px;
+    color: #fefefe;
   }
   .PriceTag {
-    border: 10px solid #e8e9e4;
+    border: 10px solid #fefefe;
     border-radius: 10px;
-    background: #e8e9e4;
+    background: #fefefe;
     font-weight: 600;
     margin-left: 20px;
   }
@@ -41,9 +42,9 @@
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  background: #e8e9e4;
+  background: #fefefe;
   border-radius: 10px;
-  border: 20px solid #e8e9e4;
+  border: 20px solid #fefefe;
   margin-right: 20px;
 }
 

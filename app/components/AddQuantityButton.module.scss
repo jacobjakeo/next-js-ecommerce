@@ -1,0 +1,23 @@
+.QuantityButton {
+  border: 10px solid #fefefe;
+  border-radius: 10px;
+  background: #fefefe;
+  font-weight: 600;
+  display: inline-block;
+  height: 20px;
+  margin-left: 5px;
+
+  Button {
+    border: black solid 0.5px;
+    border-radius: 10%;
+    background: black;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+  }
+
+  .QuantityAmount {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
