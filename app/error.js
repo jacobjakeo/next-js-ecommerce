@@ -1,5 +1,5 @@
 'use client';
 
 export default function RootError() {
-  return <div>Something went wrong!</div>;
+  return <div>This page could not be found!</div>;
 }

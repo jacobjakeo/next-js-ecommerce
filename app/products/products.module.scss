@@ -17,6 +17,7 @@
     color: white;
     font-family: 'Archivo', Helvetica, sans-serif;
     z-index: 1;
+    font-weight: 400;
   }
   background-size: cover;
 }
@@ -37,8 +38,7 @@
 
   .Name {
     text-decoration: none;
-    font-family: 'Archivo', Helvetica, sans-serif;
-    font-weight: 700;
+    font-family: 'ScriptaGothic', Helvetica, sans-serif;
     color: #fefefe;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -53,9 +53,6 @@
 
 .productsImages {
   grid-area: productsImages;
-  border: whitesmoke;
-  background: whitesmoke;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: 35vh;
   position: relative;
   border-radius: 10px;

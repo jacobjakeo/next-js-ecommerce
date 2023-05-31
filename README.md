@@ -44,3 +44,12 @@ This is a simple e-commerce project created with Next.js, React, and SCSS. It us
 
 - Canva
 - Adobe Firefly
+
+### Screenshots
+
+<img width="1430" alt="Bildschirmfoto 2023-05-31 um 12 42 43" src="https://github.com/jacobjakeo/next-js-ecommerce/assets/127110488/52849a44-4a64-4b20-bba1-dfc2331953ab"/>
+<img width="1430" alt="Bildschirmfoto 2023-05-31 um 12 43 08" src="https://github.com/jacobjakeo/next-js-ecommerce/assets/127110488/dafb7283-0a17-433a-a746-ee3840771b35"/>
+
+### FIGMA Documentation
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQBH0CzhDRuvhIeBANwnKaI%2FNYXUS-ECommerce-Project%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DHrMHlEDJUsoW8CGo-1" allowfullscreen></iframe>
