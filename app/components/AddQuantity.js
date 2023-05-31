@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import styles from './AddQuantityButton.module.scss';
 
-const AddQuantityButton = () => {
+const AddQuantityButton = ({ bike, bikeId }) => {
   const [count, setCount] = useState(1);
   const [total, setTotal] = useState(0);
 
@@ -12,10 +12,27 @@ const AddQuantityButton = () => {
   };
 
   const decrement = () => {
-    setCount(count - 1);
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   const addToTotal = () => {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+    const { productName, price } = bike;
+    const quantity = count;
+
+    if (!cartItems[bikeId]) {
+      cartItems[bikeId] = {
+        productName,
+        price,
+        quantity,
+      };
+    } else {
+      cartItems[bikeId].quantity += quantity;
+    }
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
     setTotal(total + count);
   };
 

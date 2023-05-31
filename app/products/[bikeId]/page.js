@@ -1,5 +1,3 @@
-'use strict';
-
 import Image from 'next/image';
 import AddQuantityButton from '../../components/AddQuantity';
 import { getBikeById } from '../../database/bikes';
@@ -35,7 +33,7 @@ export default async function BikePage({ params }) {
           <span className={styles.PriceTag} data-test-id="product-price">
             € {singleBike.price},00
           </span>
-          <AddQuantityButton />
+          <AddQuantityButton bike={singleBike} bikeId={params.bikeId} />
         </div>
         <div className={styles.Description}>
           <ul>
