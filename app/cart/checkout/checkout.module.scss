@@ -1,84 +1,70 @@
-.form {
+.pageContainer {
   display: flex;
-  flex-direction: column;
-  background: rgb(245, 245, 245);
-  background: linear-gradient(
-    180deg,
-    rgba(245, 245, 245, 1) 7%,
-    rgba(227, 242, 233, 1) 26%,
-    rgba(202, 230, 213, 1) 46%
-  );
-  width: 100%;
-  height: 100%;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  height: 100vh; // Adjust the height as needed
+  font-family: 'Archivo', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
 
   h2 {
-    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
-    text-transform: uppercase;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
-    color: #173c24;
-  }
-
-  .nameInput {
-    border-radius: 1rem;
-    row-gap: 10px;
-    border: 10px solid #e8e9e4;
-    background: #e8e9e4;
-    margin-top: 5px;
-  }
-  label {
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-
-    input {
-      all: unset;
-      font-size: 1rem;
-      border: #173c24 10px solid;
-      background: #173c24;
-      color: white;
-      height: 1rem;
-      margin-top: 0.25rem;
-      border-radius: 10px;
-    }
+    color: black;
   }
 }
 
-.City {
-  border-radius: 1rem;
-  row-gap: 10px;
-  border: 10px solid #e8e9e4;
-  background: #e8e9e4;
-
-  label {
-    margin-top: 10px;
-  }
+.shippingForm {
+  border: 10px solid whitesmoke;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.formColumns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.creditCard {
+.formColumn {
   display: flex;
   flex-direction: column;
-  height: 15rem;
-  border-radius: 1rem;
-  row-gap: 10px;
-  border: 10px solid #e8e9e4;
-  background: #e8e9e4;
+  margin-right: 20px; // Adjust the spacing between columns as needed
+}
 
-  .checkoutButton {
-    all: unset;
-    display: inline-block;
-    width: auto;
-    text-decoration: none;
-    font-family: 'Archivo', Helvetica, sans-serif;
-    font-weight: 600;
-    color: #e8e9e4;
-    text-transform: uppercase;
-    border: #173c24 8px solid;
-    background: #173c24;
-    border-radius: 10px;
-    margin-top: 10px;
-  }
+.checkoutButton {
+  color: white;
+  background: black;
+  width: 100%;
+  height: 35px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.inputField {
+  width: 100%;
+  height: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.formField {
+  margin-bottom: 10px; // Adjust the spacing between label-input pairs as needed
+}
+
+.formText {
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  font-size: 10px;
+  position: relative;
 }

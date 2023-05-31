@@ -11,7 +11,7 @@
   h1 {
     display: grid;
     position: fixed;
-    margin-top: 100px;
+    margin-top: 25vh;
     width: 100%;
     text-align: center;
     color: white;
@@ -53,8 +53,9 @@
 
 .productsImages {
   grid-area: productsImages;
-  border: hwb(0 100% 0% / 0.512) 20px;
-  background: hwb(0 100% 0% / 0.512);
+  border: whitesmoke;
+  background: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: 35vh;
   position: relative;
   border-radius: 10px;

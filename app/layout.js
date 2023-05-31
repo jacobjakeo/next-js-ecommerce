@@ -10,22 +10,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className={styles.Navbar}>
-          <Link
-            href="/products"
-            className={styles.Bikes}
-            data-test-id="products-link"
-          >
-            Bikes
-          </Link>
-          <Link href="/" className={styles.Logo}>
-            NYXUS
-          </Link>
-          <Link href="/cart" className={styles.Cart} data-test-id="cart-link">
-            Cart
-          </Link>
-        </nav>
-        {children}
+        <header>
+          <nav className={styles.Navbar}>
+            <Link
+              href="/products"
+              className={styles.Bikes}
+              data-test-id="products-link"
+            >
+              Bikes
+            </Link>
+            <Link href="/" className={styles.Logo}>
+              NYXUS
+            </Link>
+            <Link href="/cart" className={styles.Cart} data-test-id="cart-link">
+              Cart
+            </Link>
+          </nav>
+          {children}
+        </header>
       </body>
     </html>
   );
