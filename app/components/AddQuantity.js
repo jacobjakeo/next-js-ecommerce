@@ -1,11 +1,12 @@
 'use client';
-
 import React, { useState } from 'react';
+import { useCookies } from 'react-cookie';
 import styles from './AddQuantityButton.module.scss';
 
 const AddQuantityButton = ({ bike, bikeId }) => {
   const [count, setCount] = useState(1);
   const [total, setTotal] = useState(0);
+  const [cookies, setCookie] = useCookies(['cart']);
 
   const increment = () => {
     setCount(count + 1);
@@ -18,22 +19,37 @@ const AddQuantityButton = ({ bike, bikeId }) => {
   };
 
   const addToTotal = () => {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+    const cart = cookies.cart || {};
     const { productName, price } = bike;
     const quantity = count;
 
-    if (!cartItems[bikeId]) {
-      cartItems[bikeId] = {
+    if (!cart[bikeId]) {
+      cart[bikeId] = {
         productName,
         price,
         quantity,
       };
     } else {
-      cartItems[bikeId].quantity += quantity;
+      cart[bikeId].quantity += quantity;
     }
 
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    setCookie('cart', cart);
     setTotal(total + count);
+
+    // Logic to update the cart items count
+    const updateCartItems = () => {
+      let totalItems = 0;
+
+      Object.keys(cart).forEach((itemId) => {
+        totalItems += cart[itemId].quantity;
+      });
+
+      // Update the cart items count in the Navbar or wherever needed
+      // You can use your preferred method to update the count, e.g., updating a state variable or dispatching an action
+      console.log('Total Cart Items:', totalItems);
+    };
+
+    updateCartItems();
   };
 
   return (

@@ -18,6 +18,7 @@
   align-items: center;
   margin-bottom: 10px;
   border-bottom: white 1px solid;
+  padding: 5px;
 }
 
 .itemName {
@@ -67,6 +68,13 @@
 }
 
 .clearCartButton {
+  background: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.removeItemButton {
   background: black;
   border: none;
   border-radius: 4px;
