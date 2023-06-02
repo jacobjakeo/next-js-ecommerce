@@ -16,7 +16,7 @@ const CartTotal = () => {
     setCartTotal(total);
   }, [cookies.cart]);
 
-  return <p className={styles.CartTotal}>({cartTotal})</p>;
+  return <p className={styles.CartTotal}>{cartTotal}</p>;
 };
 
 export default CartTotal;

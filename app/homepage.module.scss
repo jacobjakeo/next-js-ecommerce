@@ -40,23 +40,22 @@
   overflow: hidden;
   position: relative;
   width: 550px;
+  margin-right: 50px;
 }
 
 .Heading1 span {
   font-size: 40px;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .message {
-  background-color: white;
   color: #173c24;
-  display: block;
   font-weight: 900;
   overflow: hidden;
   position: absolute;
   padding-left: 0.5rem;
   top: 0.2rem;
-  left: 270px;
+  left: 354px;
   animation: openclose 5s ease-in-out infinite;
 }
 
