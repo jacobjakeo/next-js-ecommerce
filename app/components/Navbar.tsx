@@ -1,10 +1,9 @@
-'use client';
 import Link from 'next/link';
 import React from 'react';
 import CartTotal from './CartTotal';
 import styles from './navbar.module.scss';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <nav className={styles.Navbar}>
       <Link
@@ -19,7 +18,7 @@ const Navbar = () => {
       </Link>
       <Link href="/cart" className={styles.Cart} data-test-id="cart-link">
         Cart
-        <CartTotal className={styles.CartTotal} data-test-id="cart-count" />
+        <CartTotal data-test-id="cart-count" />
       </Link>
     </nav>
   );

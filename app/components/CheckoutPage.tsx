@@ -1,9 +1,8 @@
 'use client';
-
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './CheckoutPage.module.scss';
 
-const handleFormSubmit = (event) => {
+const handleFormSubmit = (event: FormEvent) => {
   event.preventDefault();
   // Perform form submission logic here
   // After successful submission, navigate to the "orderdone" page
@@ -26,6 +25,46 @@ export default function CheckoutPage() {
     document.cookie = 'cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   };
 
+  const handleFirstNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setFirstName(event.currentTarget.value);
+  };
+
+  const handleLastNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setLastName(event.currentTarget.value);
+  };
+
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.currentTarget.value);
+  };
+
+  const handleAddressChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setAddress(event.currentTarget.value);
+  };
+
+  const handlePostalChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPostal(event.currentTarget.value);
+  };
+
+  const handleCityChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCity(event.currentTarget.value);
+  };
+
+  const handleCountryChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCountry(event.currentTarget.value);
+  };
+
+  const handleCreditCardChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCreditCard(event.currentTarget.value);
+  };
+
+  const handleExpirationChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setExpiration(event.currentTarget.value);
+  };
+
+  const handleSecurityCodeChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSecurityCode(event.currentTarget.value);
+  };
+
   return (
     <div className={styles.pageContainer}>
       <form className={styles.shippingForm} onSubmit={handleFormSubmit}>
@@ -38,7 +77,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-first-name"
                   value={firstName}
-                  onChange={(event) => setFirstName(event.currentTarget.value)}
+                  onChange={handleFirstNameChange}
                   className={styles.inputField}
                   required
                 />
@@ -50,7 +89,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-last-name"
                   value={lastName}
-                  onChange={(event) => setLastName(event.currentTarget.value)}
+                  onChange={handleLastNameChange}
                   className={styles.inputField}
                   required
                 />
@@ -62,7 +101,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-email"
                   value={email}
-                  onChange={(event) => setEmail(event.currentTarget.value)}
+                  onChange={handleEmailChange}
                   className={styles.inputField}
                   required
                 />
@@ -76,7 +115,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-adress"
                   value={address}
-                  onChange={(event) => setAddress(event.currentTarget.value)}
+                  onChange={handleAddressChange}
                   className={styles.inputField}
                   required
                 />
@@ -88,7 +127,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-postal-code"
                   value={postal}
-                  onChange={(event) => setPostal(event.currentTarget.value)}
+                  onChange={handlePostalChange}
                   className={styles.inputField}
                   required
                 />
@@ -100,7 +139,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-city"
                   value={city}
-                  onChange={(event) => setCity(event.currentTarget.value)}
+                  onChange={handleCityChange}
                   className={styles.inputField}
                   required
                 />
@@ -112,7 +151,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-country"
                   value={country}
-                  onChange={(event) => setCountry(event.currentTarget.value)}
+                  onChange={handleCountryChange}
                   className={styles.inputField}
                   required
                 />
@@ -126,7 +165,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-credit-card"
                   value={creditCard}
-                  onChange={(event) => setCreditCard(event.currentTarget.value)}
+                  onChange={handleCreditCardChange}
                   className={styles.inputField}
                   required
                 />
@@ -138,7 +177,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-expiration-date"
                   value={expiration}
-                  onChange={(event) => setExpiration(event.currentTarget.value)}
+                  onChange={handleExpirationChange}
                   className={styles.inputField}
                   required
                 />
@@ -150,9 +189,7 @@ export default function CheckoutPage() {
                 <input
                   data-test-id="checkout-security-code"
                   value={securityCode}
-                  onChange={(event) =>
-                    setSecurityCode(event.currentTarget.value)
-                  }
+                  onChange={handleSecurityCodeChange}
                   className={styles.inputField}
                   required
                 />

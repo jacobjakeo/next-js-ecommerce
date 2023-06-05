@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './homepage.module.scss';
 
-export default function HomePage() {
+const HomePage: React.FC = () => {
   return (
     <main className={styles.Body}>
       <img
@@ -18,4 +19,6 @@ export default function HomePage() {
       </h1>
     </main>
   );
-}
+};
+
+export default HomePage;

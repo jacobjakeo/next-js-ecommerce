@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './CartTotal.module.scss';
 
-const CartTotal = () => {
+const CartTotal: React.FC = () => {
   const [cookies] = useCookies(['cart']);
-  const [cartTotal, setCartTotal] = useState(0);
+  const [cartTotal, setCartTotal] = useState<number>(0);
 
   useEffect(() => {
     const cart = cookies.cart || {};

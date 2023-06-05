@@ -1,28 +1,28 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './CartFunction.module.scss';
 
-const handleCheckout = () => {
+const handleCheckout = (): void => {
   window.location.href = '/cart/checkout';
 };
 
-export default function CartPage() {
+export default function CartPage(): React.JSX.Element {
   const [cookies, setCookie] = useCookies(['cart']);
-  const cart = cookies.cart || {};
+  const cart: { [itemId: string]: any } = cookies.cart || {};
 
-  const clearCart = () => {
+  const clearCart = (): void => {
     setCookie('cart', {}); // Clear the cart by setting it to an empty object
     window.location.reload();
   };
 
-  const removeItem = (itemId) => {
+  const removeItem = (itemId: string): void => {
     const updatedCart = { ...cart };
     delete updatedCart[itemId];
     setCookie('cart', updatedCart);
   };
 
-  const calculateTotal = () => {
+  const calculateTotal = (): number => {
     let total = 0;
     Object.keys(cart).forEach((itemId) => {
       const item = cart[itemId];
@@ -41,7 +41,7 @@ export default function CartPage() {
             <span className={styles.itemQuantity}>{cart[itemId].quantity}</span>
             <span className={styles.itemPrice}>€ {cart[itemId].price}</span>
             <button
-              data-test-id="cart-product-remove-<product id>"
+              data-test-id={`cart-product-remove-${itemId}`}
               className={styles.removeItemButton}
               onClick={() => removeItem(itemId)}
             >

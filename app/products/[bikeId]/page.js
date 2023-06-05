@@ -11,9 +11,6 @@ export const metadata = {
 };
 
 export default async function BikePage({ params }) {
-  // const singleBike = getBikeById(Number(params.bikeId));
-  // Convert the string into a number
-
   const singleBike = await getBikeById(Number(params.bikeId));
 
   return (

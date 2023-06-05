@@ -1,11 +1,17 @@
+import React from 'react';
 import styles from './order.module.scss';
 
-export const metadata = {
+interface Metadata {
+  title: string;
+  description: string;
+}
+
+export const metadata: Metadata = {
   title: 'Thank you for your order!',
   description: 'You will receive your order confirmation per email.',
 };
 
-export default function CheckoutPage() {
+export default function CheckoutPage(): React.JSX.Element {
   return (
     <main>
       <div className={styles.container}>
