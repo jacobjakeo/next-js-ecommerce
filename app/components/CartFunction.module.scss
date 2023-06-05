@@ -19,21 +19,26 @@
   margin-bottom: 10px;
   border-bottom: white 1px solid;
   padding: 5px;
-}
 
-.itemName {
-  font-weight: bold;
-  padding: 5px;
-}
+  .itemName {
+    flex: 1; /* Let the item name expand to fill available space */
+    font-weight: bold;
+    padding: 5px;
+  }
 
-.itemPrice {
-  color: whitesmoke;
-  font-weight: 700;
-}
+  .itemPrice {
+    flex-shrink: 0; /* Prevent the item price from shrinking */
+    width: 80px; /* Set a fixed width for the item price */
+    color: whitesmoke;
+    font-weight: 700;
+  }
 
-.itemQuantity {
-  border-left: 1px solid white;
-  padding: 5px;
+  .itemQuantity {
+    flex-shrink: 0; /* Prevent the item quantity from shrinking */
+    width: 60px; /* Set a fixed width for the item quantity */
+    border-left: 1px solid white;
+    padding: 5px;
+  }
 }
 
 .cartSummary {
