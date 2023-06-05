@@ -65,6 +65,12 @@
   border-radius: 4px;
   font-size: 16px;
   text-align: center;
+  cursor: pointer;
+}
+
+.checkoutButton:hover {
+  background: #e6e6e6;
+  color: black;
 }
 
 .clearCartButton {
@@ -72,6 +78,12 @@
   border: none;
   border-radius: 4px;
   color: white;
+  cursor: pointer;
+}
+
+.clearCartButton:hover {
+  background: #e6e6e6;
+  color: black;
 }
 
 .removeItemButton {
@@ -79,4 +91,10 @@
   border: none;
   border-radius: 4px;
   color: white;
+  cursor: pointer;
+}
+
+.removeItemButton:hover {
+  background: #e6e6e6;
+  color: black;
 }

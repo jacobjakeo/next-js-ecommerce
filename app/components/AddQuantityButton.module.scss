@@ -16,6 +16,11 @@
     color: white;
   }
 
+  Button:hover {
+    background: #e6e6e6;
+    color: black;
+    border: #e6e6e6 solid 0.5px;
+  }
   .QuantityAmount {
     margin-left: 5px;
     margin-right: 5px;

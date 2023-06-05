@@ -22,6 +22,10 @@ export default function CheckoutPage() {
   const [expiration, setExpiration] = useState('');
   const [securityCode, setSecurityCode] = useState('');
 
+  const clearCartCookies = () => {
+    document.cookie = 'cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  };
+
   return (
     <div className={styles.pageContainer}>
       <form className={styles.shippingForm} onSubmit={handleFormSubmit}>
@@ -157,6 +161,7 @@ export default function CheckoutPage() {
             <button
               className={styles.checkoutButton}
               data-test-id="checkout-confirm-order"
+              onClick={clearCartCookies}
             >
               Confirm Order
             </button>
