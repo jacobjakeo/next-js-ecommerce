@@ -4,7 +4,7 @@ Created by Jakub Oksa for UpLeveled FullStack Bootcamp.
 
 ### Description
 
-This is a simple e-commerce project created with Next.js, React, and SCSS. It uses a database to fetch products and display them on the page. The user can add products to the cart and remove them from the cart. The cart is saved in the browser's local storage.
+This is a simple e-commerce project created with Next.js, React, and SCSS. It uses a database to fetch products and display them on the page. The user can add products to the cart and remove them from the cart. The cart is saved inside the cookies.
 
 ### Technologies
 
