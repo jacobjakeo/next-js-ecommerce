@@ -73,7 +73,7 @@ export default function CheckoutPage() {
           <div className={styles.formColumn}>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                First Name
+                First Name*
                 <input
                   data-test-id="checkout-first-name"
                   value={firstName}
@@ -85,7 +85,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Last Name
+                Last Name*
                 <input
                   data-test-id="checkout-last-name"
                   value={lastName}
@@ -97,7 +97,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Email
+                Email*
                 <input
                   data-test-id="checkout-email"
                   value={email}
@@ -111,7 +111,7 @@ export default function CheckoutPage() {
           <div className={styles.formColumn}>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Address
+                Address*
                 <input
                   data-test-id="checkout-adress"
                   value={address}
@@ -123,7 +123,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                ZIP Code
+                ZIP Code*
                 <input
                   data-test-id="checkout-postal-code"
                   value={postal}
@@ -135,7 +135,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                City
+                City*
                 <input
                   data-test-id="checkout-city"
                   value={city}
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Country
+                Country*
                 <input
                   data-test-id="checkout-country"
                   value={country}
@@ -161,7 +161,7 @@ export default function CheckoutPage() {
           <div className={styles.formColumn}>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Credit Card Number
+                Credit Card Number*
                 <input
                   data-test-id="checkout-credit-card"
                   value={creditCard}
@@ -173,7 +173,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Expiration Date
+                Expiration Date*
                 <input
                   data-test-id="checkout-expiration-date"
                   value={expiration}
@@ -185,7 +185,7 @@ export default function CheckoutPage() {
             </div>
             <div className={styles.formField}>
               <label className={styles.formText}>
-                Security Code
+                Security Code*
                 <input
                   data-test-id="checkout-security-code"
                   value={securityCode}

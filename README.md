@@ -13,7 +13,6 @@ This is a simple e-commerce project created with Next.js, React, and SCSS. It us
 - SCSS
 - PostgreSQL
 - Heroku
-
 - Canva
 - Adobe Firefly
 
@@ -25,3 +24,5 @@ This is a simple e-commerce project created with Next.js, React, and SCSS. It us
 ### FIGMA Documentation
 
 https://www.figma.com/file/QBH0CzhDRuvhIeBANwnKaI/NYXUS-ECommerce-Project?type=whiteboard&node-id=0%3A1&t=HrMHlEDJUsoW8CGo-1
+
+## Setup Instructions
