@@ -57,6 +57,7 @@ export default async function BikesPage() {
             <div className={styles.productsImages}>
               <Image
                 src={`/images/${bike.productName}.png`}
+                alt="Prototype of a Nyxus bicycle"
                 width={250}
                 height={250}
               />

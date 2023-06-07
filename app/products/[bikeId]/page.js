@@ -19,7 +19,7 @@ export default async function BikePage({ params }) {
         <div className={styles.ProductPage} />
         <Image
           src={`/images/${singleBike.productName}.png`}
-          alt="Zephyr X"
+          alt="Prototype of a Nyxus bicycle"
           className={styles.ProductImage}
           data-test-id="product-image"
           width={550}

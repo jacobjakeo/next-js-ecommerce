@@ -6,7 +6,7 @@ const HomePage: React.FC = () => {
     <main className={styles.Body}>
       <img
         src="/images/NyxusBackground.jpg"
-        alt="Nyxus Biker"
+        alt="A man on a bicycle, biking up a hill"
         className={styles.LandingImage}
       />
       <h1 className={styles.Heading1}>
