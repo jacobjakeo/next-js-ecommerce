@@ -4,8 +4,8 @@ import { useCookies } from 'react-cookie';
 import styles from './CartTotal.module.scss';
 
 const CartTotal: React.FC = () => {
-  const [cookies] = useCookies(['cart']);
   const [cartTotal, setCartTotal] = useState<number>(0);
+  const [cookies] = useCookies(['cart']);
 
   useEffect(() => {
     const cart = cookies.cart || {};
@@ -14,7 +14,7 @@ const CartTotal: React.FC = () => {
       total += cart[itemId].quantity;
     });
     setCartTotal(total);
-  }, [cookies.cart]);
+  }, [cookies]);
 
   return <p className={styles.CartTotal}>{cartTotal}</p>;
 };

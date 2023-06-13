@@ -19,26 +19,25 @@
   margin-bottom: 10px;
   border-bottom: white 1px solid;
   padding: 5px;
+}
 
-  .itemName {
-    flex: 1;
-    font-weight: bold;
-    padding: 5px;
-  }
+.itemName {
+  flex: 1;
+  font-weight: bold;
+  padding: 5px;
+}
 
-  .itemPrice {
-    flex-shrink: 0;
-    width: 80px;
-    color: whitesmoke;
-    font-weight: 700;
-  }
+.itemPrice {
+  flex-shrink: 0;
+  width: 80px;
+  color: whitesmoke;
+  font-weight: 700;
+}
 
-  .itemQuantity {
-    flex-shrink: 0;
-    width: 60px;
-    border-left: 1px solid white;
-    padding: 5px;
-  }
+.itemQuantity {
+  flex-shrink: 0;
+  color: black;
+  font-weight: 700;
 }
 
 .cartSummary {
@@ -53,11 +52,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
 
-  .totalPrice {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-  }
+.totalPrice {
+  font-weight: bold;
+  border-bottom: 2px solid white;
 }
 
 .checkoutButton {

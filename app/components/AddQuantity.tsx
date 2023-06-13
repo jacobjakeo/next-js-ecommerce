@@ -1,9 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './AddQuantityButton.module.scss';
 
 interface Bike {
+  id: number;
   productName: string;
   price: number;
 }

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './CartFunction.module.scss';
 
@@ -12,13 +12,19 @@ export default function CartPage(): React.JSX.Element {
   const cart: { [itemId: string]: any } = cookies.cart || {};
 
   const clearCart = (): void => {
-    setCookie('cart', {}); // Clear the cart by setting it to an empty object
+    setCookie('cart', {}); // Clear cart cookie
     window.location.reload();
   };
 
   const removeItem = (itemId: string): void => {
     const updatedCart = { ...cart };
     delete updatedCart[itemId];
+    setCookie('cart', updatedCart);
+  };
+
+  const updateQuantity = (itemId: string, quantity: number): void => {
+    const updatedCart = { ...cart };
+    updatedCart[itemId].quantity = quantity;
     setCookie('cart', updatedCart);
   };
 
@@ -31,24 +37,32 @@ export default function CartPage(): React.JSX.Element {
     return total;
   };
 
+  const cartItems = Object.keys(cart).map((itemId) => (
+    <div className={styles.cartItem} key={itemId}>
+      <span className={styles.itemName}>{cart[itemId].productName}</span>
+      <input
+        type="number"
+        className={styles.itemQuantity}
+        value={cart[itemId].quantity}
+        onChange={(e) => updateQuantity(itemId, parseInt(e.target.value))}
+        min={1}
+      />
+      <span className={styles.itemPrice}>€ {cart[itemId].price}</span>
+      <button
+        data-test-id={`cart-product-remove-${itemId}`}
+        className={styles.removeItemButton}
+        onClick={() => removeItem(itemId)}
+      >
+        Remove
+      </button>
+    </div>
+  ));
+
   return (
     <div className={styles.container}>
       <div className={styles.cartItems}>
         <h2>Cart Summary</h2>
-        {Object.keys(cart).map((itemId) => (
-          <div className={styles.cartItem} key={itemId}>
-            <span className={styles.itemName}>{cart[itemId].productName}</span>
-            <span className={styles.itemQuantity}>{cart[itemId].quantity}</span>
-            <span className={styles.itemPrice}>€ {cart[itemId].price}</span>
-            <button
-              data-test-id={`cart-product-remove-${itemId}`}
-              className={styles.removeItemButton}
-              onClick={() => removeItem(itemId)}
-            >
-              Remove
-            </button>
-          </div>
-        ))}
+        {cartItems.length > 0 ? cartItems : <p>Your cart is empty.</p>}
       </div>
       <div className={styles.cartSummary}>
         <h2>Total Cost</h2>

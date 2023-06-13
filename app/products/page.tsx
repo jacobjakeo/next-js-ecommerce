@@ -1,14 +1,22 @@
-import { getBikes } from '/Users/jakuboksa/projects/next-js-ecommerce/app/database/bikes.ts';
+import { getBikes } from '/Users/jakuboksa/projects/next-js-ecommerce/app/database/bikes';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './products.module.scss';
+
+interface Bike {
+  id: number;
+  productName: string;
+  category: string;
+  price: string;
+  description: string;
+}
 
 export const metadata = {
   title: 'Nyxus | Our Bikes',
   description: 'Choose a bike that suits your needs.',
 };
 
-const bikes = [
+const bikes: Bike[] = [
   {
     id: 1,
     productName: 'Zephyr',
@@ -41,8 +49,12 @@ const bikes = [
   },
 ];
 
-export default async function BikesPage() {
-  const bikes = await getBikes();
+const BikesPage: React.FC = () => {
+  const getBikesData = async () => {
+    const bikes = await getBikes();
+    return bikes;
+  };
+
   return (
     <main className={styles.BikesPage}>
       <h1>EXPLORE OUR FLEET</h1>
@@ -67,4 +79,6 @@ export default async function BikesPage() {
       })}
     </main>
   );
-}
+};
+
+export default BikesPage;

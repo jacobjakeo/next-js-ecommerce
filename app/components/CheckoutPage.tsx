@@ -4,8 +4,6 @@ import styles from './CheckoutPage.module.scss';
 
 const handleFormSubmit = (event: FormEvent) => {
   event.preventDefault();
-  // Perform form submission logic here
-  // After successful submission, navigate to the "orderdone" page
   window.location.href = '/cart/checkout/orderdone';
 };
 
@@ -113,7 +111,7 @@ export default function CheckoutPage() {
               <label className={styles.formText}>
                 Address*
                 <input
-                  data-test-id="checkout-adress"
+                  data-test-id="checkout-address"
                   value={address}
                   onChange={handleAddressChange}
                   className={styles.inputField}
