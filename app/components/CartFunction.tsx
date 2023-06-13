@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './CartFunction.module.scss';
 
@@ -8,23 +9,25 @@ const handleCheckout = (): void => {
 
 export default function CartPage(): React.JSX.Element {
   const [cookies, setCookie] = useCookies(['cart']);
-  const cart: { [itemId: string]: any } = cookies.cart || {};
+  const [cart, setCart] = useState(cookies.cart || {});
 
   const clearCart = (): void => {
-    setCookie('cart', {}); // Clear cart cookie
-    window.location.reload();
+    setCookie('cart', {});
+    setCart({});
   };
 
   const removeItem = (itemId: string): void => {
     const updatedCart = { ...cart };
     delete updatedCart[itemId];
     setCookie('cart', updatedCart);
+    setCart(updatedCart);
   };
 
   const updateQuantity = (itemId: string, quantity: number): void => {
     const updatedCart = { ...cart };
     updatedCart[itemId].quantity = quantity;
     setCookie('cart', updatedCart);
+    setCart(updatedCart);
   };
 
   const calculateTotal = (): number => {

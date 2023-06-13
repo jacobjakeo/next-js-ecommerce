@@ -1,5 +1,4 @@
 import { cache } from 'react';
-import { Bike } from '../migrations/1685462524-insertBikesToTable';
 import { sql } from './connect';
 
 // export const bikes = [

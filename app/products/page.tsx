@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getBikes } from '../../database/bikes';
 import styles from './products.module.scss';
 
 interface Bike {
@@ -50,11 +49,6 @@ const bikes: Bike[] = [
 ];
 
 const BikesPage: React.FC = () => {
-  const getBikesData = async () => {
-    const bikes = await getBikes();
-    return bikes;
-  };
-
   return (
     <main className={styles.BikesPage}>
       <h1>EXPLORE OUR FLEET</h1>
