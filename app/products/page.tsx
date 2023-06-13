@@ -66,6 +66,7 @@ const BikesPage: React.FC = () => {
                 alt="Prototype of a Nyxus bicycle"
                 width={250}
                 height={250}
+                data-test-id="product-image"
               />
             </div>
           </div>
