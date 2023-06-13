@@ -22,6 +22,10 @@
     "Offroad",
     "offroadbike",
     "Oksa",
-    "orderdone"
+    "orderdone",
+    "PGDATABASE",
+    "PGHOST",
+    "PGPASSWORD",
+    "PGUSERNAME"
   ]
 }

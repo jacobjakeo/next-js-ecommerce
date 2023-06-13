@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './products.module.scss';
 
 interface Bike {
@@ -56,9 +55,13 @@ const BikesPage: React.FC = () => {
         return (
           <div key={`bike-div-${bike.id}`} className={styles.bikesContainer}>
             <div className={styles.productsLinks}>
-              <Link href={`/products/${bike.id}`} className={styles.Name}>
+              <a
+                href={`/products/${bike.id}`}
+                className={styles.Name}
+                data-test-id="product-<product id>"
+              >
                 {bike.productName}
-              </Link>
+              </a>
             </div>
             <div className={styles.productsImages}>
               <Image
@@ -66,6 +69,8 @@ const BikesPage: React.FC = () => {
                 alt="Prototype of a Nyxus bicycle"
                 width={250}
                 height={250}
+                data-test-id="product-image"
+                unoptimized={true}
               />
             </div>
           </div>
