@@ -1,7 +1,7 @@
 import './globals.css';
-import Navbar from '/Users/jakuboksa/projects/next-js-ecommerce/app/components/Navbar';
 import { Inter } from 'next/font/google';
 import React from 'react';
+import Navbar from './components/Navbar';
 
 export const metadata = {
   title: 'Nyxus | Future of Mobility',

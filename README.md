@@ -1,10 +1,23 @@
 ## Next.js E-Commerce Project
 
 Created by Jakub Oksa for UpLeveled FullStack Bootcamp.
+Work in Progress, as my focus currently shifts on the final project.
 
 ### Description
 
 This is a simple e-commerce project created with Next.js, React, and SCSS. It uses a database to fetch products and display them on the page. The user can add products to the cart and remove them from the cart. The cart is saved inside the cookies.
+
+There is no payment information stored anywhere, as it is purely a demo project / doesn't have a payment provider.
+
+### Getting Started
+
+To initialize the repository, run:
+pnpm install
+
+To start the localhost, run:
+pnpm dev
+
+The application should be available on http://localhost:3000 with your browser to see the result.
 
 ### Technologies
 
@@ -12,7 +25,17 @@ This is a simple e-commerce project created with Next.js, React, and SCSS. It us
 - React
 - SCSS
 - PostgreSQL
-- Heroku
+- Fly.io
+- Vercel (depending if Fly.io works or not)
+
+### Testing
+
+- Playwright
+- Jest (coming soon for Unit Testing)
+- Github Action (coming soon)
+
+### Tools
+
 - Canva
 - Adobe Firefly
 
@@ -24,5 +47,3 @@ This is a simple e-commerce project created with Next.js, React, and SCSS. It us
 ### FIGMA Documentation
 
 https://www.figma.com/file/QBH0CzhDRuvhIeBANwnKaI/NYXUS-ECommerce-Project?type=whiteboard&node-id=0%3A1&t=HrMHlEDJUsoW8CGo-1
-
-## Setup Instructions

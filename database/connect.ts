@@ -2,7 +2,7 @@ import 'server-only';
 import { config } from 'dotenv-safe';
 import postgres from 'postgres';
 
-config();
+if (!process.env.FLY_IO) config();
 
 declare module globalThis {
   let postgresSqlClient: ReturnType<typeof postgres> | undefined;

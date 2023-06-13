@@ -1,5 +1,5 @@
-import CheckoutPage from '/Users/jakuboksa/projects/next-js-ecommerce/app/components/CheckoutPage';
 import React from 'react';
+import CheckoutPage from '../../components/CheckoutPage';
 
 interface Metadata {
   title: string;

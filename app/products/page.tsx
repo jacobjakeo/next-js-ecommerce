@@ -1,6 +1,6 @@
-import { getBikes } from '/Users/jakuboksa/projects/next-js-ecommerce/app/database/bikes';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getBikes } from '../../database/bikes';
 import styles from './products.module.scss';
 
 interface Bike {

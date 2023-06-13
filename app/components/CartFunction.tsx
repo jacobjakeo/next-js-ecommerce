@@ -1,5 +1,4 @@
 'use client';
-import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './CartFunction.module.scss';
 
@@ -38,7 +37,7 @@ export default function CartPage(): React.JSX.Element {
   };
 
   const cartItems = Object.keys(cart).map((itemId) => (
-    <div className={styles.cartItem} key={itemId}>
+    <div className={styles.cartItem} key={`cart-item-${itemId}`}>
       <span className={styles.itemName}>{cart[itemId].productName}</span>
       <input
         type="number"

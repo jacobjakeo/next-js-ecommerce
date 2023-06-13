@@ -1,8 +1,8 @@
 import { cache } from 'react';
-import { Bike } from '../../migrations/1685462524-insertBikesToTable';
+import { Bike } from '../migrations/1685462524-insertBikesToTable';
 import { sql } from './connect';
 
-//export const bikes = [
+// export const bikes = [
 //  {
 //    id: 1,
 //   productName: 'Zephyr',
@@ -39,7 +39,7 @@ import { sql } from './connect';
 //  return bikes.find((bike) => bike.id === id);
 // }
 
-//type Bike = {
+// type Bike = {
 // id: number;
 //  productName: string;
 //  category: string;
@@ -48,13 +48,29 @@ import { sql } from './connect';
 // };
 
 export const getBikes = cache(async () => {
-  const bikes = await sql<Bike[]>`
+  const bikes = await sql<
+    {
+      id: number;
+      productName: string;
+      category: string;
+      price: string;
+      description: string;
+    }[]
+  >`
   SELECT * FROM bikes;`;
   return bikes;
 });
 
 export const getBikeById = cache(async (id: number) => {
-  const [bike] = await sql<Bike[]>`
+  const [bike] = await sql<
+    {
+      id: number;
+      productName: string;
+      category: string;
+      price: string;
+      description: string;
+    }[]
+  >`
     SELECT * FROM bikes WHERE id = ${id};
   `;
   return bike;

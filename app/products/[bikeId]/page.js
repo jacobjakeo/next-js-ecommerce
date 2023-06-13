@@ -1,6 +1,6 @@
 import Image from 'next/image';
+import { getBikeById } from '../../../database/bikes';
 import AddQuantityButton from '../../components/AddQuantity';
-import { getBikeById } from '../../database/bikes';
 import styles from './bikelayout.module.scss';
 
 export const dynamic = 'force-dynamic';
