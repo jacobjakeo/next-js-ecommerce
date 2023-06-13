@@ -65,7 +65,7 @@ const BikesPage: React.FC = () => {
             </div>
             <div className={styles.productsImages}>
               <Image
-                src={`/images/${bike.productName}.png`}
+                src={`/images/${bike.productName}.avif`}
                 alt="Prototype of a Nyxus bicycle"
                 width={250}
                 height={250}
