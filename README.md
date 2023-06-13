@@ -21,12 +21,11 @@ The application should be available on http://localhost:3000 with your browser t
 
 ### Technologies
 
-- Next.js
-- React
-- SCSS
-- PostgreSQL
-- Fly.io
-- Vercel (depending if Fly.io works or not)
+- Next.js (frontend)
+- React (frontend)
+- SCSS (styling)
+- PostgreSQL (database)
+- Vercel (deployment)
 
 ### Testing
 
