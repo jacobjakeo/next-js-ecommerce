@@ -70,6 +70,7 @@ const BikesPage: React.FC = () => {
                 width={250}
                 height={250}
                 data-test-id="product-image"
+                unoptimized={true}
               />
             </div>
           </div>
